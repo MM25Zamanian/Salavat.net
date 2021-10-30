@@ -1,10 +1,10 @@
 {
-  "name": "pwa-lit-template",
-  "version": "0.1.0",
+  "name": "salavat.net",
+  "version": "0.0.0",
   "private": true,
-  "description": "A template for building Progressive Web Applications using Lit and Vaadin Router",
   "license": "MIT",
-  "repository": "github:IBM/pwa-lit-template",
+  "repository": "https://github.com/mm25zamanian/Salavat.net",
+  "author": "MohammadMahdi Zamanian <mm25zamanian@gmail.com>",
   "engines": {
     "node": ">=14.0.0"
   },
@@ -90,5 +90,6 @@
   },
   "stylelint": {
     "extends": "stylelint-config-ibmresearch"
-  }
+  },
+  "main": "index.html"
 }
