@@ -19,7 +19,7 @@
     "lint:stylelint": "stylelint src/{components,pages}/**/*.ts --ignore-path .gitignore",
     "prepare": "husky install",
     "serve": "web-dev-server --watch",
-    "start": "npm run serve",
+    "start": "yarn serve",
     "test": "echo \"Error: no test specified\"",
     "types:check": "npm-run-all --parallel types:check:*",
     "types:check:lit-analyzer": "lit-analyzer src/{components,pages}/**/*.ts --strict",
