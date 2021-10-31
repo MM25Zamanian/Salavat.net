@@ -8,12 +8,14 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
 
+import { mbgc } from '../colors.js';
 import rebootCSS from '../reboot.js';
 import { attachRouter } from '../router/index.js';
 
 import '@material/mwc-snackbar';
 import '@material/mwc-button';
 import '@material/mwc-icon-button';
+import '@material/mwc-fab';
 
 import './app-navigation.js';
 import './app-loader.js';
@@ -30,8 +32,20 @@ export class AppIndex extends LitElement {
       :host {
         --mdc-typography-font-family: 'samim', sans-serif;
       }
+      main {
+        height: calc(100% - 105px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
     `,
   ];
+
+  updated() {
+    (<HTMLElement>document.querySelector(':root')).style.setProperty(
+      '--bgc',
+      mbgc.toString()
+    );
+  }
 
   render() {
     return html`

@@ -1,6 +1,7 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 
+import { mbgc, nbgc } from '../colors.js';
 import rebootCSS from '../reboot.js';
 import { router, urlForName } from '../router/index.js';
 import { routes } from '../router/routes.js';
@@ -32,12 +33,13 @@ export class AppNavigation extends LitElement {
         left: 0;
         right: 0;
         direction: ltr;
+        padding-top: 37px;
+        background-color: ${mbgc};
       }
       .nav-box {
         display: flex;
         padding: 0 8px 8px;
-        background-color: #fff;
-        border-radius: 8px;
+        background-color: ${nbgc};
         height: 66px;
       }
       .nav-container {
@@ -53,16 +55,16 @@ export class AppNavigation extends LitElement {
       }
       .nav__item.active .nav__item-icon {
         margin-top: -66px;
-        box-shadow: 0px 0px 0px 10px #f0f0f0;
+        box-shadow: 0px 0px 0px 10px ${mbgc};
       }
       .nav__item.active .nav__item-text {
         transform: scale(1);
       }
       .nav__item.active .nav__item-icon::before {
-        box-shadow: 10px -10px 0px 0px #f0f0f0;
+        box-shadow: 7px -11px 0px 0px ${mbgc};
       }
       .nav__item.active .nav__item-icon::after {
-        box-shadow: -10px -10px 0px 0px #f0f0f0;
+        box-shadow: -7px -11px 0px 0px ${mbgc};
       }
       .nav__item-icon::before,
       .nav__item-icon::after {
@@ -72,13 +74,13 @@ export class AppNavigation extends LitElement {
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        transition: box-shadow 250ms 100ms ease-in-out;
+        transition: box-shadow 150ms 100ms ease-in-out;
       }
       .nav__item-icon::before {
-        left: -27px;
+        left: -26px;
       }
       .nav__item-icon::after {
-        right: -27px;
+        right: -26px;
       }
       .nav__item-link {
         display: flex;
@@ -93,7 +95,7 @@ export class AppNavigation extends LitElement {
         align-items: center;
         justify-content: center;
         font-size: 1.6em;
-        background-color: #fff;
+        background-color: ${nbgc};
         border-radius: 50%;
         height: 46px;
         width: 46px;
