@@ -5,18 +5,22 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { html, css } from 'lit';
+import { html, css, unsafeCSS } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
 import { PageElement } from '../helpers/page-element.js';
+import rebootCSS from '../reboot.js';
 
 @customElement('page-about')
 export class PageAbout extends PageElement {
-  static styles = css`
-    section {
-      padding: 1rem;
-    }
-  `;
+  static styles = [
+    unsafeCSS(rebootCSS),
+    css`
+      section {
+        padding: 1rem;
+      }
+    `,
+  ];
 
   render() {
     return html`
