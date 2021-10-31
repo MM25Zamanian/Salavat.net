@@ -26,6 +26,9 @@
     "types:check:tsc": "tsc --noEmit"
   },
   "dependencies": {
+    "@material/mwc-button": "^0.25.3",
+    "@material/mwc-icon-button": "^0.25.3",
+    "@material/mwc-snackbar": "^0.25.3",
     "@vaadin/router": "^1.7.4",
     "lit": "^2.0.2",
     "pwa-helper-components": "~0.2.10",
