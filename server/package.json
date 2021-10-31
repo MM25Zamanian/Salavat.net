@@ -1,12 +1,10 @@
 {
   "private": true,
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
-    "start": "prpl-server --root dist/ --config prpl.config.json --host 0.0.0.0 --https-redirect --bot-proxy https://render-tron.appspot.com/render"
+    "start": "prpl-server --root dist/ --config prpl.config.json --host 127.0.0.1 --port 5500 --https-redirect --bot-proxy https://render-tron.appspot.com/render"
   },
   "dependencies": {
     "prpl-server": "^1.4.2"
-  }
+  },
+  "author": "MohammadMahdi Zamanian <mm25zamanian@gmail.com>"
 }
