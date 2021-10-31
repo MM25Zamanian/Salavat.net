@@ -1053,6 +1053,15 @@
     lit "^2.0.0"
     tslib "^2.0.1"
 
+"@material/mwc-fab@^0.25.3":
+  version "0.25.3"
+  resolved "https://registry.yarnpkg.com/@material/mwc-fab/-/mwc-fab-0.25.3.tgz#ead57649b7865ceb3eef916b988a4c03d18e2a04"
+  integrity sha512-XE1BQNKAEear+Uq58s+DjZe6yw7kiiQofdayXjbKVRf5VS4Kdd0PDfb8sIYyRbwszknVB9jmisk9LQjHTfzs7w==
+  dependencies:
+    "@material/mwc-ripple" "^0.25.3"
+    lit "^2.0.0"
+    tslib "^2.0.1"
+
 "@material/mwc-icon-button@^0.25.3":
   version "0.25.3"
   resolved "https://registry.yarnpkg.com/@material/mwc-icon-button/-/mwc-icon-button-0.25.3.tgz#6058577e77526d1da7a7ed8d7fe73c7ac513b23d"
