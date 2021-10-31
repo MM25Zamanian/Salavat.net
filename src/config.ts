@@ -7,6 +7,6 @@
 
 export default {
   environment: 'development',
-  appName: 'Salavat.net',
-  appDescription: 'Salavat.net',
+  appName: 'صلوات',
+  appDescription: 'توضیحات اپلیکیشن صلوات',
 };
