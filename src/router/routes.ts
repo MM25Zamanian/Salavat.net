@@ -1,12 +1,14 @@
 export interface Route {
-  path: string,
-  name: string,
-  icon: string,
-  label: string,
-  component: string,
-  show_in_nav: boolean,
-  action: () => Promise<void>,
+  path: string;
+  name: string;
+  icon: string;
+  label: string;
+  component: string;
+  show_in_nav: boolean;
+  action: () => Promise<void>;
 }
+
+/* sparkles-outline */
 
 export const routes: Route[] = [
   {
@@ -20,7 +22,17 @@ export const routes: Route[] = [
       await import('../pages/page-home.js');
     },
   },
-
+  {
+    path: '/campigan',
+    name: 'campigan',
+    icon: 'sparkles-outline',
+    label: 'صلوات شمار',
+    show_in_nav: true,
+    component: 'page-counter',
+    action: async () => {
+      await import('../pages/page-counter.js');
+    },
+  },
   {
     path: '/about',
     name: 'about',
