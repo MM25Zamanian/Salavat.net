@@ -1,7 +1,7 @@
 {
-  "builds": [
-    {
-      "name": "."
-    }
-  ]
+  "entrypoint": "index.html",
+  "builds": [{
+    "name": ".",
+    "browserCapabilities": ["es2015", "push"]
+  }]
 }
