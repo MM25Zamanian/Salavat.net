@@ -284,3 +284,6 @@ export const blue_grey_A100 = CSS('#cfd8dc');
 export const blue_grey_A200 = CSS('#b0bec5');
 export const blue_grey_A400 = CSS('#78909c');
 export const blue_grey_A700 = CSS('#455a64');
+
+export const mbgc = CSS('#e7e7f1');
+export const nbgc = CSS('#fafaff');
