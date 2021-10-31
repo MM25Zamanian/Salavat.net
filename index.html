@@ -7,76 +7,77 @@ LICENSE file in the root directory of this source tree.
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>MyApplication</title>
-    <meta name="description" content="MyApplication description" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <base href="/" />
+  <title>صلوات</title>
+  <!-- <meta name="description" content="MyApplication description" /> -->
 
-    <link rel="icon" href="images/favicon.ico" />
+  <base href="/" />
 
-    <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="images/favicon.ico" />
 
-    <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="manifest.webmanifest" />
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="MyApplication" />
+  <meta name="theme-color" content="#000000" />
 
-    <link rel="apple-touch-icon" href="images/manifest/icon-192x192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Salavat.net" />
 
-    <link rel="canonical" href="/" />
+  <link rel="apple-touch-icon" href="images/manifest/icon-192x192.png" />
 
-    <meta property="og:title" content="MyApplication" />
-    <meta property="og:description" content="MyApplication description" />
-    <meta property="og:image" content="/images/open-graph/cover.png" />
-    <meta property="og:image:alt" content="MyApplication logo" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:url" content="/" />
+  <link rel="canonical" href="/" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta property="og:title" content="Salavat.net" />
+  <meta property="og:description" content="Salavat.net" />
+  <meta property="og:image" content="/images/open-graph/cover.png" />
+  <meta property="og:image:alt" content="Salavat.net logo" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:url" content="/" />
 
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
-      media="print"
-      onload="this.media='all'"
-    />
+  <style>
+    html,
+    body,
+    app-index {
+      height: 100%;
+    }
 
-    <style>
-      html,
-      body,
-      app-index {
-        height: 100%;
-      }
+    body {
+      margin: 0;
+      font-family: 'samim', sans-serif;
+      background-color: #f0f0f0;
+      direction: rtl;
+    }
 
-      body {
-        margin: 0;
-        font-family: 'IBM Plex Sans', sans-serif;
-      }
+    noscript {
+      display: block;
+      margin: 1em;
+    }
 
-      noscript {
-        display: block;
-        margin: 1em;
-      }
-    </style>
-  </head>
-  <body>
-    <app-index></app-index>
+    @font-face {
+      font-family: 'samim';
+      src: url('/fonts/Samim-FD.woff') format('woff'),
+        url('/fonts/Samim-FD.woff2') format('woff2');
+    }
+  </style>
+</head>
 
-    <noscript>Please enable JavaScript to view this website.</noscript>
+<body>
+  <app-index></app-index>
 
-    <script type="module" src="src/components/app-index.ts"></script>
-  </body>
+  <noscript>Please enable JavaScript to view this website.</noscript>
+
+  <script type="module" src="src/components/app-index.ts"></script>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </html>
