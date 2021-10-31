@@ -29,20 +29,51 @@ const absoluteBaseUrl =
   'http://localhost:8000';
 
 const workboxConfig = {
+  mode: 'production',
   sourcemap: false,
   runtimeCaching: [{
-    urlPattern: /images\/.*$/,
+    urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
     handler: 'CacheFirst',
     options: {
       cacheName: 'images',
       expiration: {
         maxEntries: 60,
+        maxAgeSeconds: 7 * 24 * 60 * 60, // 7 Days
+      },
+    },
+  }, {
+    urlPattern: /\.(?:js)$/,
+    handler: 'CacheFirst',
+    options: {
+      cacheName: 'scripts',
+      expiration: {
+        maxEntries: 60,
+        maxAgeSeconds: 7 * 24 * 60 * 60, // 7 Days
+      },
+    },
+  }, {
+    urlPattern: /\.(?:eot|ttf|woff|woff2)$/,
+    handler: 'CacheFirst',
+    options: {
+      cacheName: 'fonts',
+      expiration: {
+        maxEntries: 60,
         maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
       },
     },
+  }, {
+    urlPattern: /.*$/,
+    handler: 'CacheFirst',
+    options: {
+      cacheName: 'other',
+      expiration: {
+        maxEntries: 60,
+        maxAgeSeconds: 7 * 24 * 60 * 60, // 30 Days
+      },
+    },
   }, ],
-  skipWaiting: false,
-  clientsClaim: false,
+  skipWaiting: true,
+  clientsClaim: true,
 };
 
 const config = merge(
@@ -80,19 +111,17 @@ const config = merge(
           'process.env.NODE_ENV': JSON.stringify('production'),
         },
       }),
-      ...(NODE_ENV !== 'development' ?
-        [
-          replace({
-            preventAssignment: true,
-            include: 'src/**/*.ts',
-            exclude: 'src/config.*.ts',
-            delimiters: ['', ''],
-            values: {
-              './config.js': `./config.${NODE_ENV}.js`,
-            },
-          }),
-        ] :
-        []),
+      ...(NODE_ENV !== 'development' ? [
+        replace({
+          preventAssignment: true,
+          include: 'src/**/*.ts',
+          exclude: 'src/config.*.ts',
+          delimiters: ['', ''],
+          values: {
+            './config.js': `./config.${NODE_ENV}.js`,
+          },
+        }),
+      ] : []),
       copy({
         // Copy all the static files
         patterns: ['images/**/*', 'fonts/**/*', 'manifest.webmanifest', 'robots.txt'],
