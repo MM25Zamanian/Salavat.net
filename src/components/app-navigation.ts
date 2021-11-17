@@ -96,7 +96,7 @@ export class AppNavigation extends LitElement {
         justify-content: center;
         font-size: 1.6em;
         background-color: ${nbgc};
-        border-radius: 50%;
+        border-radius: 8px;
         height: 46px;
         width: 46px;
         transition: margin-top 250ms ease-in-out, box-shadow 150ms 100ms ease;

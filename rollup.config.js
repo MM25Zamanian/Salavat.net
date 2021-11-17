@@ -32,50 +32,20 @@ const workboxConfig = {
   mode: 'production',
   sourcemap: false,
   runtimeCaching: [{
-    urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+    urlPattern: /\/$/,
     handler: 'CacheFirst',
     options: {
-      cacheName: 'images',
-      expiration: {
-        maxEntries: 60,
-        maxAgeSeconds: 7 * 24 * 60 * 60, // 7 Days
-      },
+      cacheName: 'html',
     },
   }, {
-    urlPattern: /\.(?:js)$/,
+    urlPattern: /\.*$/,
     handler: 'CacheFirst',
     options: {
-      cacheName: 'scripts',
-      expiration: {
-        maxEntries: 60,
-        maxAgeSeconds: 7 * 24 * 60 * 60, // 7 Days
-      },
+      cacheName: 'cache-name',
     },
-  }, {
-    urlPattern: /\.(?:eot|ttf|woff|woff2)$/,
-    handler: 'CacheFirst',
-    options: {
-      cacheName: 'fonts',
-      expiration: {
-        maxEntries: 60,
-        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
-      },
-    },
-  }, {
-    urlPattern: /.*$/,
-    handler: 'CacheFirst',
-    options: {
-      cacheName: 'other',
-      expiration: {
-        maxEntries: 60,
-        maxAgeSeconds: 7 * 24 * 60 * 60, // 30 Days
-      },
-    },
-  }, ],
+  }],
   skipWaiting: true,
-  clientsClaim: true,
 };
-
 const config = merge(
   createSpaConfig({
     outputDir: DIST_PATH,

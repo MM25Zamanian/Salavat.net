@@ -32,6 +32,7 @@
     "@material/mwc-snackbar": "^0.25.3",
     "@vaadin/router": "^1.7.4",
     "lit": "^2.0.2",
+    "material-icons": "^1.10.0",
     "pwa-helper-components": "~0.2.10",
     "tslib": "^2.3.1"
   },
@@ -94,6 +95,5 @@
   },
   "stylelint": {
     "extends": "stylelint-config-ibmresearch"
-  },
-  "main": "index.html"
+  }
 }

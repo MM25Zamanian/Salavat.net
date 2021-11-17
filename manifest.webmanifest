@@ -1,31 +1,30 @@
 {
-    "theme_color": "#b603db",
-    "background_color": "#e36cfc",
-    "display": "standalone",
-    "scope": "/",
-    "start_url": "/",
-    "name": "Salavat",
-    "short_name": "Salavat.net",
-    "icons": [
-        {
-            "src": "/icon-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/icon-256x256.png",
-            "sizes": "256x256",
-            "type": "image/png"
-        },
-        {
-            "src": "/icon-384x384.png",
-            "sizes": "384x384",
-            "type": "image/png"
-        },
-        {
-            "src": "/icon-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ]
+  "theme_color": "#b603db",
+  "background_color": "#e36cfc",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Salavat",
+  "short_name": "Salavat.net",
+  "icons": [{
+      "src": "/images/manifest/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/manifest/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/manifest/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/manifest/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

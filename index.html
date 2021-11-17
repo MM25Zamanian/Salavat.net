@@ -40,18 +40,13 @@ LICENSE file in the root directory of this source tree.
   <meta property="og:image:height" content="512" />
   <meta property="og:url" content="/" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Round&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <style>
     html,
     body,
     app-index {
       height: 100%;
-    }
-
-    html {
-      --mdc-icon-font: 'Material Icons Round';
     }
 
     body {
@@ -71,6 +66,33 @@ LICENSE file in the root directory of this source tree.
       font-family: 'samim';
       src: url('/fonts/Samim-FD.woff') format('woff'),
         url('/fonts/Samim-FD.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url('/fonts/material-icons.woff2') format('woff2'),
+        url('/fonts/material-icons.woff') format('woff');
+    }
+
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-feature-settings: 'liga';
     }
   </style>
 </head>
